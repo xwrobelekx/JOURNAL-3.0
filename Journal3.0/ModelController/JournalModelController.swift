@@ -7,3 +7,44 @@
 //
 
 import Foundation
+
+
+class JournalModelController {
+    
+    // singelton
+    
+    static var shared = JournalModelController()
+    
+    
+    //source of truth
+    var journalEntries: [EntryModel] = []
+    
+    //CRUD
+    
+    
+//create
+    func create(entry: EntryModel) {
+        
+    }
+    //read
+    
+    // update
+    func update(entry: EntryModel){
+        
+    }
+    
+    //delete
+    func delete(entry: EntryModel){
+        
+    }
+    
+    // simple Persist
+    
+    //URL
+    
+    //Save
+    
+    //Load
+    
+    
+}
