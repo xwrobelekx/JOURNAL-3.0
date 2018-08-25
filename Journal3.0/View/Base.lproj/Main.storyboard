@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="FG4-Bh-TOa">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="entryCell" id="FG4-Bh-TOa">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FG4-Bh-TOa" id="bi1-i7-Rsw">
@@ -45,6 +45,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="editButtonTapped" destination="x36-T3-hHJ" id="hAj-mB-GvZ"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SAE-Hj-4de" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -78,6 +81,9 @@
                                 <rect key="frame" x="131.5" y="616" width="112.5" height="31"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N4m-Xv-aed"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="WtC-Fw-gyp">
                                 <rect key="frame" x="19" y="74" width="337.5" height="522"/>
@@ -114,8 +120,16 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="gzt-lw-Ypg">
-                        <barButtonItem key="rightBarButtonItem" title="Clear" id="V1s-gm-5IZ"/>
+                        <barButtonItem key="rightBarButtonItem" title="Clear" id="V1s-gm-5IZ">
+                            <connections>
+                                <action selector="clearButtonTapped:" destination="BYZ-38-t0r" id="Kgx-gJ-ght"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="textView" destination="KLC-WN-mHw" id="jxv-wF-3Nq"/>
+                        <outlet property="titleTextField" destination="ajV-wF-k7H" id="dRV-bo-fGt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
